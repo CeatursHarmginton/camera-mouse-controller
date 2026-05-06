@@ -5,15 +5,15 @@ def _requires_from_file(filename):
 
 
 setup(
-    name='nonmouse',
-    version='2.7.0',
+    name='camera-mouse-controller',
+    version='3.0.0',
     packages=find_packages(),
-    description='a webcam-based virtual gesture mouse that is easy to use with hands on the desk',
-    author='Yuki TAKEYAMA',
-    author_email='namiki.takeyama@gmail.com',
-    url='https://github.com/takeyamayuki/NonMouse',
+    description='A webcam-based virtual gesture mouse controller powered by MediaPipe hand tracking',
+    author='CeatursHarmginton',
+    author_email='',
+    url='https://github.com/CeatursHarmginton/camera-mouse-controller',
     license='Apache-2.0',
     install_requires=_requires_from_file('requirements.txt'),
     entry_points={'console_scripts': ['nonmouse=nonmouse.__main__:main',]},
-    python_requires='>=3.6',
+    python_requires='>=3.8',
 )

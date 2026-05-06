@@ -3,12 +3,12 @@
 from nonmouse import *
 import os, glob
 
-__copyright__    = 'Copyright (C) 2023 Yuki TAKEYAMA'
-__version__      = '2.7.0'
+__copyright__    = 'Copyright (C) 2026 CeatursHarmginton'
+__version__      = '3.0.0'
 __license__      = 'Apache-2.0'
-__author__       = 'Yuki TAKEYAMA'
-__author_email__ = 'namiki.takeyama@gmail.com'
-__url__          = 'http://github.com/takeyamayuki/NonMouse'
+__author__       = 'CeatursHarmginton'
+__author_email__ = ''
+__url__          = 'https://github.com/CeatursHarmginton/camera-mouse-controller'
 
 __all__ = [
     os.path.split(os.path.splitext(file)[0])[1]

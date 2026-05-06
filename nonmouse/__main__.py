@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# NonMouse
-# Author: Yuki Takeyama
-# Date: 2023/04/09
+# Camera Mouse Controller
+# Author: CeatursHarmginton
+# Based on NonMouse by Yuki Takeyama
 
 import cv2
 import time

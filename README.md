@@ -1,186 +1,180 @@
 <div align="center">
-   <img src="https://user-images.githubusercontent.com/22733958/183041432-cf6cc6f4-3a6f-4070-91a8-d0a7f7abf59f.JPG" width="600">
+
+# 🖐️ Camera Mouse Controller
+
+**Control your computer with hand gestures — no mouse needed!**
+
+A webcam-based virtual gesture mouse powered by MediaPipe hand tracking.
+
+[![GitHub stars](https://img.shields.io/github/stars/CeatursHarmginton/camera-mouse-controller?style=for-the-badge&color=00ff88&labelColor=1a1a2e)](https://github.com/CeatursHarmginton/camera-mouse-controller/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/CeatursHarmginton/camera-mouse-controller?style=for-the-badge&color=00d4ff&labelColor=1a1a2e)](https://github.com/CeatursHarmginton/camera-mouse-controller/network)
+[![GitHub issues](https://img.shields.io/github/issues/CeatursHarmginton/camera-mouse-controller?style=for-the-badge&color=ff6b6b&labelColor=1a1a2e)](https://github.com/CeatursHarmginton/camera-mouse-controller/issues)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776ab?style=for-the-badge&logo=python&logoColor=white&labelColor=1a1a2e)](https://python.org)
+
 </div>
 
-<div align="center">
-   a webcam-based virtual gesture mouse that is easy to use with hands on the desk  
-</div>
+---
 
-<p align="center">
-  <a href="https://github.com/takeyamayuki/NonMouse/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/takeyamayuki/nonmouse" />
-  </a>
-  <a href ="https://pypi.org/project/nonmouse/">
-     <img src="https://static.pepy.tech/personalized-badge/nonmouse?period=total&units=international_system&left_color=grey&right_color=green&left_text=PyPI%20downloads" />
-   </a>
-  <a href="https://github.com/takeyamayuki/NonMouse/releases">
-    <img src="https://img.shields.io/github/v/release/takeyamayuki/nonmouse" />
-  </a>
-  <a href ="https://github.com/takeyamayuki/NonMouse/releases">
-     <img src="https://img.shields.io/github/downloads/takeyamayuki/NonMouse/total" />
-   </a>
-  <a href="https://zenn.dev/ninzin/articles/94b05fdb9edf53">
-    <img src="https://img.shields.io/badge/Zenn%20Likes-129-blue" />
-  </a>  
+## ✨ Features
 
-</p>
+- 🖐️ **Hand gesture control** — Move cursor, click, scroll, zoom with natural hand movements
+- 📷 **Webcam only** — No special hardware needed, works with any webcam
+- ⌨️ **CapsLock toggle** — Activate/deactivate tracking without interfering with your workflow
+- 🎯 **Adjustable sensitivity** — Fine-tune cursor speed to your preference
+- 📐 **Multiple camera positions** — Normal, Above, or Behind placement
+- 📖 **Built-in gesture guide** — Interactive visual guide in the setup window
+- 🎬 **Real-time overlay** — See your actions displayed in a floating overlay
+- 🔍 **Pinch zoom** — Zoom in/out with thumb-index pinch gestures
+- 📜 **Momentum scrolling** — Swipe to scroll with natural momentum
 
---- 
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/CeatursHarmginton/camera-mouse-controller.git
+cd camera-mouse-controller
+```
+
+### 2. Run
+
+**Windows** — Just double-click `run.bat`!
+
+The script will automatically:
+- ✅ Check Python installation (3.8+ required)
+- ✅ Create virtual environment
+- ✅ Install all dependencies (mediapipe, opencv, numpy, etc.)
+- ✅ Launch the application
+
+**Manual run (all platforms):**
+
+```bash
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+
+pip install -r requirements.txt
+python -m nonmouse
+```
+
+---
+
+## 🖐️ Hand Gestures
+
+| Gesture | Action | How To | Visual Indicator |
+|---------|--------|--------|-----------------|
+| ☝️ **Move Cursor** | Move mouse | Point with index finger | 🔵 Blue dot |
+| ✌️ **Stop Cursor** | Freeze cursor | Touch index + middle tips | No dot |
+| 👍 **Left Click** | Click | Thumb to index 2nd joint | 🟡 Yellow circle |
+| ✊ **Right Click** | Right click | Hold click for 1.5s | 🔴 Red circle |
+| 👆 **Scroll** | Scroll page | Fold index + move up/down | ⚫ Black circle |
+| 🤏 **Zoom Out** | Zoom out | Pinch thumb + index | 🟣 Purple circle |
+| 🖐️ **Zoom In** | Zoom in | Spread thumb + index | 🔵 Cyan circle |
+
+### Gesture Images
 
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/22733958/135473409-9ddf2fc5-4722-4e55-8eef-64476635c10d.gif"></td>
-<td><img src="https://user-images.githubusercontent.com/22733958/129838897-86da6861-b3a5-4e14-98fe-400a27c894d7.gif"></td>
+<td align="center"><strong>Move Cursor</strong><br><img width="200" src="images/gesture_move_cursor_1769252514204.png"></td>
+<td align="center"><strong>Left Click</strong><br><img width="200" src="images/gesture_left_click_1769252530545.png"></td>
+<td align="center"><strong>Scroll</strong><br><img width="200" src="images/gesture_scroll_1769252544618.png"></td>
+<td align="center"><strong>Pinch Zoom</strong><br><img width="200" src="images/gesture_pinch_zoom_1769252559440.png"></td>
 </tr>
 </table>
 
+---
 
+## 📷 Camera Placement
 
-<!-- 
-https://github.com/user-attachments/assets/2acef749-7251-47a9-ba7d-aa2a77ae81e3
--->
+| Mode | Description |
+|------|-------------|
+| 🖥️ **Normal** | Webcam facing you (laptop built-in camera) |
+| ⬆️ **Above** | Camera above your hand, pointing down |
+| 🔙 **Behind** | Camera behind you, pointing at the display |
 
+---
 
-# Features
+## ⚙️ Settings
 
-- No need for anything other than a webcam and host PC.
-- Gesture-based HCI has been around for some time, but shooting from above makes the mouse easier to use.
-- NonMouse can be invoked by the global hotkey even when this application is inactive.
-- Works well with typing.    
-- Just download from the latest release(windows, mac only).  
+When you launch the app, a setup window appears with two panels:
 
-# Installation
-## 📁 Executable file 
-Download the zip file that matches your environment from the [latest release](https://github.com/takeyamayuki/NonMouse/releases). 
+- **Left panel** — Camera device, position, sensitivity, and options
+- **Right panel** — Interactive hand gesture guide with images and instructions
 
-OR
-## 🐍 PyPI
-Run the following script.
+| Setting | Description |
+|---------|-------------|
+| 📷 Camera | Select camera device (0-3) |
+| 📍 Position | Normal / Above / Behind |
+| 🎯 Sensitivity | 1-100 (Low=precise, High=fast) |
+| ⏭️ Skip setup | Remember settings for next time |
 
-```sh
-$ pip install nonmouse
+---
+
+## 💡 Tips
+
+1. **Good lighting** — Keep your hand well-lit for better tracking
+2. **Steady hand** — Keep hand parallel to the camera
+3. **Distance** — Not too close, not too far from the camera
+4. **CapsLock ON** = Tracking active, **CapsLock OFF** = Tracking paused
+5. **Press ESC** or close the camera window to quit
+
+---
+
+## 🎯 Sensitivity Guide
+
+| Range | Mode | Best For |
+|-------|------|----------|
+| 1-30 | Precise | Detailed work, small movements |
+| 30-60 | Balanced | General use |
+| 60-100 | Fast | Quick navigation, large screens |
+
+---
+
+## 🛠️ Tech Stack
+
+- **[MediaPipe](https://mediapipe.dev/)** — Hand landmark detection (21 points)
+- **[OpenCV](https://opencv.org/)** — Camera capture & image processing
+- **[pynput](https://pynput.readthedocs.io/)** — Mouse control
+- **[Pillow](https://pillow.readthedocs.io/)** — Gesture guide images
+- **[Tkinter](https://docs.python.org/3/library/tkinter.html)** — Setup UI & overlay
+
+---
+
+## 📁 Project Structure
+
 ```
-(If you have trouble installing mediapipe, please visit the [official website](https://google.github.io/mediapipe/getting_started/install.html).)
+camera-mouse-controller/
+├── nonmouse/
+│   ├── __init__.py        # Package metadata
+│   ├── __main__.py        # Main application loop
+│   ├── args.py            # Setup UI with gesture guide
+│   ├── config.py          # Configuration management
+│   ├── overlay.py         # Floating action overlay
+│   └── utils.py           # Utility functions
+├── images/                # Gesture guide images
+├── config/                # PyInstaller specs
+├── config.json            # User settings
+├── requirements.txt       # Python dependencies
+├── run.bat                # Auto-setup & run script (Windows)
+└── setup.py               # Package setup
+```
 
-# Usage
-## 1. Install a camera
-The following three ways of placing the device are assumed.
+---
 
-- `Normal`: Place a webcam normally and point it at yourself (or use your laptop's built-in camera)   
+## 📝 License
 
-   <table>
-   <tr>
-   <td><img width="300" alt="スクリーンショット 2021-09-13 午後5 33 21" src="https://user-images.githubusercontent.com/22733958/134465166-3c324aef-0ee6-4dd9-9810-b723e945e748.jpg"></td>
-   <td><img width="300" alt="スクリーンショット 2021-09-13 午後5 33 21" src="https://user-images.githubusercontent.com/22733958/134456933-0c81812d-c23d-4e52-860e-2a341d5bbe3c.png"></td>
-   </tr>
-   </table>
+This project is based on [NonMouse](https://github.com/takeyamayuki/NonMouse) by Yuki Takeyama.
 
-- `Above`: Place it above your hand and point it towards your hand.  
+---
 
-   <table>
-   <tr>
-   <td><img width="300" alt="スクリーンショット 2021-09-13 午後5 33 21" src="https://user-images.githubusercontent.com/22733958/134124093-51c85b18-3d90-4935-8daa-a78761d1aaed.jpg"></td>
-   <td><img width="300" alt="スクリーンショット 2021-09-13 午後5 33 21" src="https://user-images.githubusercontent.com/22733958/134456961-755a2769-1d2d-4cca-8fbd-6b49c7b2c0b1.png"></td>
-   </tr>
-   </table>
+<div align="center">
 
-- `Behind`: Place it behind you and point it at the display.  
+**Made with ❤️ by [CeatursHarmginton](https://github.com/CeatursHarmginton)**
 
-   <table>
-   <tr>
-   <td><img width="300" alt="スクリーンショット 2021-09-13 午後5 33 21" src="https://user-images.githubusercontent.com/22733958/134123691-19eb8a76-8f01-497d-b09b-ea93e72825d5.jpg"></td>
-   <td><img width="300" alt="スクリーンショット 2021-09-13 午後5 33 21" src="https://user-images.githubusercontent.com/22733958/134456968-aaf3660d-9ee2-45b8-b65a-9590a6aec4fe.png"></td>
-   </tr>
-   </table>
+⭐ Star this repo if you find it useful!
 
-## 2. Run
-- Run the executable as described in the [GitHub wiki](https://github.com/takeyamayuki/NonMouse/wiki/How-to-run-a--NonMouse-executable-file-in-each-OS#%E6%97%A5%E6%9C%AC%E8%AA%9E).
-
-   OR
--  Run the following script from the continuation of the installation.
-
-   For windows and linux(global hotkey function does not work in linux.)
-   ```sh
-   $ nonmouse
-   ```
-
-   For MacOS, you need execute permission.
-   ```sh
-   $ sudo nonmouse
-   ```
-
-## 3. Settings
-When you run the program, You will see a screen similar to the following. On this screen, you can set the camera and sensitivity.
-
-![スクリーンショット 2021-12-02 154251](https://user-images.githubusercontent.com/22733958/144371606-d6b8cb07-f376-4097-95c3-c6cd7b3141ca.png)
-
-- `Camera`  
-Select a camera device. If multiple cameras are connected, try them in order, starting with the smallest number.
-
-- `How to place`  
-Select the location where you placed the camera. Place the camera in one of the following positions: `Normal`, `Above`, `Behind` in [📷 Install a Camera].
-
-- `Sensitivity`  
-Set the sensitivity. If set too high, the mouse cursor will shake slightly.
-
-When you are done with the settings, click continue. The camera image will then be displayed, and you can use NonMouse with the settings you selected.
-
-## 4. Hand Movements
-
-| stop cursor | left click | right click | scroll |
-| :---: |:---: |:---: |:---: |
-| <img width="300" alt="aaa" src="https://user-images.githubusercontent.com/22733958/146399363-d90dbef0-0972-46b4-a03b-a76a6c97222f.gif">|<img width="300" alt="aaa" src="https://user-images.githubusercontent.com/22733958/146399342-d3ccb518-5950-4c69-aad4-c6fc9ad4a378.gif"> |<img width="300" alt="aaa" src="https://user-images.githubusercontent.com/22733958/146399353-0fb9304d-4f6c-4e5d-890c-0beb1dc921d2.gif"> | <img width="300" alt="aaa" src="https://user-images.githubusercontent.com/22733958/146399372-6551c367-5424-45a1-a963-c475c7ea895a.gif"> |
-
- 
-The following hand movements are enabled only when you hold down `Alt`(Windows), `Command`(MacOS). You can define your own global hotkeys by rewriting [here](https://github.com/takeyamayuki/NonMouse/blob/578afd6a7206258b68327421f64370c4009dedfd/app.py#L16-L21). You can use this function even if the window is not active.This feature is only available on windows and mac.  
-
-- cursor
-    * Mouse cursor: tip of index finger → A blue circle will appear at the tip of your index finger. 
-    * Stop mouse cursor: Attach the tip of your index finger to the tip of your middle finger. → The blue circle disappears.
-- left click
-    * Left click: Attach the fingertips of your thumb to the second joint of your index finger → A yellow circle will appear on the tip of your index finger.
-    * Left click release: Release the thumb fingertip and the second joint of the index finger. → The yellow circle disappears.
-    * Double click: Left click twice within 0.5 seconds.
-- other
-    * Right click: Hold the click state for 1.5 second without moving the cursor. → A red circle will appear at the tip of your index finger.
-    * Scroll: Scroll with the index finger with the index finger folded → a black circle will appear. 
-
-> **Note**
-> - Use it with a bright light at hand.  
-> - Keep your hand as straight as possible to the camera.
-
-## 5. Quit
-Press Ctrl+C, when a terminal window is active.     
-Press close button(Valid only on windows, linux) or Esc key, when an application window is active.   
-
-# Build
-> **Note**  
-> The built binary files can be downloaded from latest realease.
-
-
-In app-mac.spec and app-win.spec, change `pathex` to fit your environment.   
-Run the following scripts for each OS.  
-
-- windows
-
-   Copy and paste the location obtained by `pip show mediapipe` into `datas`, referring to what is written originally.  
-   Run the following script.
-   ```sh
-   $ pip show mediapipe
-   ...
-   Location: c:\users\namik\appdata\local\programs\python\python37\lib\site_packages
-   ...
-   #Copy and paste into the datas in win.spec
-   $ pyinstaller config/win.spec
-   ... ````
-- mac
-
-   Create a venv environment and perform `pip install`, because the directory specified in `datas` is for an assumed venv environment. 
-   ```sh 
-   $ git clone https://github.com/takeyamayuki/NonMouse.git
-   $ cd NonMouse
-   $ python3 -m venv venv
-   $ . venv/bin/activate
-   (venv)$ pip install -r requirements.txt
-   (venv)$ pyinstaller config/mac.spec
-   ```
+</div>
