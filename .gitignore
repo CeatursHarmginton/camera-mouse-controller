@@ -1,22 +1,45 @@
-# personal environment dependent
-__pycache__/
+# Virtual environment
 venv/
-.vscode
+.venv/
+env/
 
-# pyinstaller 
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PyInstaller
 dist/
 build/
-app.spec
+*.spec
 dist-mac/
 dist-win/
 dist-linux/
-app-s.spec
 
+# Packaging
 .eggs/
 *.egg-info/
+*.egg
 
 # pip
-site-packages
+site-packages/
 
+# OS files
+Thumbs.db
+.DS_Store
+
+# Test
 test/
-README-ja.md
+
+# Logs
+*.log
+
+# Config (user-specific runtime config)
+# config.json is tracked as default config
